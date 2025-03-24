@@ -1,0 +1,278 @@
+/* nollstäkker allt */
+* {
+	margin: 0px;
+	padding: 0px;
+}
+
+/*attribut för länkar*/
+a {
+	color: black;
+	text-decoration: none;
+}
+
+/*h2 padding så boxen inte blir för trång */
+h2 {
+	padding: 5px;
+}
+
+/* se till att inget går utanför skärm */
+div {
+	width: 100%;
+	padding: 0px;
+}
+
+/* attributer för ul */
+ul {
+	list-style-type: none;
+	overflow: hidden;
+	padding: 0px;
+	z-index: 2;
+	box-shadow: 2px 2px 2px;
+	background-color: grey;
+	display: inline-block;
+	
+}
+
+/* attributer för list items */
+li {
+	float: left;
+	width: auto;
+	z-index: 2;
+}
+
+footer {
+	opacity: 0.8;
+}
+
+/* attributer för dropdown boxen */
+li.dropdown {
+	display: block;
+	width: 116px;
+}
+
+/* attributer för dropdown menyn */
+.dropcon {
+	
+	display: none;
+	
+	position: absolute;
+	z-index: 2;
+	width: 115px;
+	float: left;
+	border: 1px blue solid;
+	opacity: 0;
+	transition: 2s;
+}
+
+/* attributer för items i dropdown menyn */
+.item {
+	border: black solid 2px;
+	padding: 12px 16px;
+	display: block;	
+	background-color: grey;
+	z-index: 2;
+}
+
+/*ändrar därg på meny box när hovrar */
+li:hover {
+	background-color: red;
+}
+
+/*fäller ned dropdown meny när hovrar över rätt sak */
+.dropdown:hover .dropcon{
+	display: inline-block;
+	opacity: 1;
+}
+
+/* ändrar bakgrundsfärg när hovrar över dropdown meny */
+.item:hover {
+	background-color: red;
+}
+
+/*nav block attribut */
+#nav {
+	display: inline-block;
+	margin: auto;
+	position: sticky;
+	top: 0;
+	z-index: 5;
+}
+
+/* hero sektion */
+#hero {
+	margin-top: 5px;
+	z-index: -5;
+	min-height: 1500px;
+}
+
+/* egenskaper för färgat block */
+#block {
+	background-color: yellow;
+	width: 200px;
+	margin-left: 15vw;
+	padding: 10px;
+	transition: 5s;
+	
+}
+
+/* bara skojs skull inom denna förtvivlan */
+#block:hover {
+	background-color: blue;
+}
+
+/* om mig sektion */
+#ommig {
+	width: 80vw;
+	background-color: yellow;
+	padding: 9vw;
+	height: auto;
+	border: solid black 0px;
+	border-radius: 15vw;
+	font-family: monospace;
+/* sorry men jag behöver transitions även om detta inte känns helt rimligt */
+	opacity: 0;
+	transition: 1s;
+	z-index: -10;
+}
+/* gör om mig synlig när jag hovrar */
+#ommig:hover {
+	opacity: 1;
+}
+/* egenskaper för kontakt */
+#kontakt {
+	border: 1px solid black;
+	display: inline-block;
+	width: 75px;
+	background-color: red;
+	border-radius: 2000px;
+	text-align: center;
+	padding: 10px;
+	transition: width 2s;
+	height: 75px;
+	font-family: papyrus;
+	z-index:1;
+}
+
+
+/* info vid höger kant av kontakt samt egenskaper*/
+#info {
+	font-family: papyrus;
+	width: 100vw;
+	float: right;
+	opacity: 0;
+	z-index: -500;
+	position: relative;
+	transition: 0.5s;
+	margin-left: -200vw;
+}
+
+
+/* ändrar kontakt egenskaper vid hover */
+#kontakt:hover {
+	width:97%;
+	min-height: 200px;
+	text-align: left;
+	height: auto;
+}
+
+/* fixar att texten inte hamnar utanför */
+#kontakt:hover > p {
+	margin-top: 90px;
+}
+
+/* ändrar info egenskaper när kontakt hovras */
+#kontakt:hover > #info{
+	max-width: 40%;
+	opacity: 1;
+	margin-top: -100px;
+	margin-right: 5%;
+	transition: 1s;
+	transition-delay: 1.5s;
+	z-index: 3;
+}
+
+
+/* dunno delens egenskaper */
+#dunno {
+	text-align: center;
+	background-color: green;
+	transform: rotate(180deg);
+	transition: 1s;
+	width: 75px;
+	height: 75px;
+	margin-left: 40%;
+}
+
+#dunno-dropdown {
+	text-align: center;
+	background-color: green;
+	opacity: 0;
+	width: 75px;
+	margin-left: 40%;
+}
+
+/* egenskapsbyte under hovring */
+#dunno:hover {
+	transition: 5s;
+	height:30px;
+	transform: rotate(720deg);
+}
+
+#dunno:hover + #dunno-dropdown {
+	transition: 1s;
+	transition-delay: 5s;
+	opacity: 1;
+}
+
+
+/* responsiv design för padda */
+@media only screen and (max-width: 1024px) {
+	#dunno{
+		background-color: white;
+	}
+	#kontakt:hover > #info{
+	max-width: 40%;
+	margin-top: -120px;
+	margin-right: 8%;
+	}
+	
+	#kontakt {
+		border-radius: 150px;
+	}
+	#kontakt:hover > p {
+		margin-top: 100px;
+	}
+	
+	#dunno-dropdown {
+		background-color: white;
+	}
+}
+
+
+/*responsiv design för mobil*/
+@media only screen and (max-width: 768px) {
+	#dunno{
+		background-color: blue;
+	
+	}
+	#kontakt:hover > #info{
+	max-width: 40%;
+	margin-top: -160px;
+	margin-right: 10%;
+	}
+	
+	#kontakt:hover {
+		width: 95%;
+	}
+	
+	#kontakt {
+		border-radius: 150px;
+	}
+	#kontakt:hover > p {
+		margin-top: 140px;
+	}
+	
+	#dunno-dropdown {
+		background-color: blue;
+	}
+}

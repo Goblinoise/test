@@ -1,0 +1,109 @@
+<!-- bengts lösning
+
+använder nav ist för div
+nestar då listor
+skriver sedan ut nestad i css. 
+> används för att skicka selectorn till nästa.
+ex:
+nav ul li:hover > li {
+
+
+https://stackoverflow.com/a/10483711
+
+-->
+
+<DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+
+<link rel="stylesheet" href="resnav3.css">
+
+<title>fml</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+<!-- div med meny. ser även till att det ligger på topp -->
+<div id="nav">
+<!-- meny listan -->
+<ul>
+<!-- första item i listan är länk -->
+<a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"> <li> <h2> link </h2> </li> </a>
+<!-- andra är dropdown menyn -->
+<a href="#"><li class="dropdown">
+<h2> dropdown </h2></a>
+<!-- själva menyn som droppar -->
+<div class="dropcon">
+
+<a href="#kontakt" class="item"> kontakt </a>
+
+<a href="#dunno" class="item"> dunno </a>
+
+</div>
+
+</li>
+<!-- ytterligare alternativ i meny -->
+<a href="#ommig">
+<li>
+<h2> om mig </h2>
+</li> </a>
+
+<li>
+</li>
+
+</ul>
+
+</div>
+<!-- hero sektion -->
+
+<div id="hero">
+<!-- block med färg och text på -->
+<div id="block">
+<p> block färg med text på </p>
+</div>
+
+<div id="ommig">
+<p> vill fan ej göra 3 fckn sidor </p>
+
+<p> Lorem ipsum odor amet, consectetuer adipiscing elit. Cubilia taciti dapibus ac nisl dis mi. Quis dictumst aenean ex, praesent porta faucibus. Ipsum class porttitor mollis ut dictum placerat elementum. Semper nunc enim ultricies nostra potenti faucibus. Urna dictum augue vulputate quisque est, consectetur tortor sed. Ornare odio sed morbi nunc adipiscing rhoncus sodales est porttitor.
+
+Nibh tortor rutrum aptent per consequat auctor maximus ultricies. Amet ultrices purus hendrerit vitae hendrerit libero vulputate auctor ultrices. Vestibulum eleifend mattis euismod justo ornare magna. Fames blandit imperdiet gravida commodo hendrerit auctor. Commodo leo lacinia curae nibh cras euismod. Suspendisse euismod duis donec urna eget. Fusce sapien sodales aliquet dictum blandit posuere risus enim posuere. Litora porta tellus donec lobortis habitant euismod.
+
+Phasellus fames adipiscing morbi rutrum luctus lectus suscipit primis nisl. Elementum orci proin adipiscing viverra ex massa odio proin volutpat. Himenaeos ex nascetur dictumst sollicitudin risus imperdiet nunc tempor. Sed pulvinar varius vestibulum nullam facilisi molestie tortor justo. Mauris risus viverra netus dolor nisl nec. Velit dictum quis tincidunt purus interdum non. Elementum natoque lacus libero consequat penatibus interdum lobortis. Aptent tincidunt proin nostra leo tortor lobortis. Orci himenaeos velit dis nec dis commodo.
+
+Iaculis etiam habitant phasellus sodales curae maximus ac erat? Ut metus mollis proin faucibus lobortis. Eget accumsan urna litora primis dui. Aliquam id pharetra vitae; tellus risus dolor viverra imperdiet. Auctor cras condimentum integer porta vulputate. Facilisis feugiat tellus varius nunc fames ligula. Et ipsum class quis commodo ipsum quam malesuada pulvinar lacus. Interdum tellus lectus platea hendrerit rutrum viverra nisi posuere nam. Leo montes scelerisque ad pretium nibh lacus. Praesent tempor nunc torquent justo primis semper elit eros netus.
+
+Dolor et vitae aliquam duis nascetur fermentum erat. Tortor massa nec nascetur porta efficitur justo et proin vulputate. Sit eleifend consequat est nisi facilisis mollis conubia. Cursus ullamcorper aptent fames amet iaculis nullam est. Posuere vulputate senectus vel justo; sociosqu purus tristique. Tempor himenaeos velit potenti, pulvinar risus taciti quisque tortor. Metus penatibus faucibus duis pellentesque arcu hendrerit in. Nibh iaculis ex parturient consectetur fusce fermentum hac consectetur tristique.
+</p>
+</div>
+
+<div id="kontakt">
+<p> kontakt </p>
+
+<!-- egen div med info som blir synlig senare-->
+<div id="info">
+<p> Lorem ipsum odor amet, consectetuer adipiscing elit. Aptent montes scelerisque ullamcorper ridiculus senectus diam lorem sit ligula. Fusce quis sapien magna rhoncus laoreet ex fusce. Conubia felis dui pretium laoreet justo netus luctus. Ultrices molestie magnis elementum adipiscing; rutrum sed odio. Hac consectetur class eu porttitor libero suspendisse malesuada curae. Elit euismod commodo cubilia feugiat ante eu tincidunt commodo consequat. <p>
+</div>
+</div>
+
+<!-- en tredje sektion som jag inte vet vad jag ska göra med -->
+<div id="dunno">
+<p> dunno </p>
+</div>
+<!-- insåg i sista stund att jag behövde en till dropdown... -->
+<div id="dunno-dropdown"> 
+<p> what to do here </p>
+</div>
+</div>
+
+
+<!-- footer och sådant --->
+<footer> kontaktuppgifter osv.
+</footer>
+
+</body>
+
+</html>
